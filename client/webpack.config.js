@@ -11,6 +11,16 @@ module.exports = {
     path: path.join(__dirname, "dist"),
     filename: "js/[name].js"
   },
+  devServer: {
+    contentBase: "./dist",
+    proxy: [ // allows redirect of requests to webpack-dev-server to another destination
+      {
+        context: ['/api', '/auth'],  // can have multiple
+        target: 'http://localhost:8081', // server and port to redirect to
+        secure: false,
+      },
+    ],
+  },
   devtool: "source-map",
   plugins: [htmlPlugin],
   module: {
@@ -28,7 +38,7 @@ module.exports = {
         enforce: "pre",
         test: /\.js$/,
         loader: "source-map-loader"
-    }
+      }
     ]
   }
 };
