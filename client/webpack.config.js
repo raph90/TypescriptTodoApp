@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "./src/index.html",
   filename: "./index.html"
@@ -28,6 +29,9 @@ module.exports = {
     htmlPlugin,
     new TSLintPlugin({
       files: ["./src/**/*.ts"]
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'css/style.css'
     })
   ],
   module: {
@@ -50,7 +54,7 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           // Translates CSS into CommonJS
           "css-loader",
           // Compiles Sass to CSS
