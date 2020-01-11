@@ -1,6 +1,6 @@
-function hello(input: String): void {
-    console.log(input);
-}
+import { hello } from "./views/test";
+import "../css/main.scss";
 
-hello("Yes this has changed")
+const hi = hello("Agatha");
 
+console.log(hi)
