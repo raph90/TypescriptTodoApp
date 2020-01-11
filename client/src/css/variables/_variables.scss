@@ -1,2 +1,12 @@
 $body-color: blue;
 $border-radius: 15px;
+$b: 1px solid black;
+
+$main-grey: rgb(79, 79, 79);
+$dark-grey: rgb(36, 36, 36);
+
+@mixin gridise($justify, $align, $flexdir: row) {
+    flex-direction: $flexdir;
+    justify-content: $justify;
+    align-items: $align;
+}

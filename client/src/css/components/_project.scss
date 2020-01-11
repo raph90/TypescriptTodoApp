@@ -1,0 +1,85 @@
+.project {
+    &__container {
+        padding-bottom: 1rem;
+        
+        width: 100%;
+   
+    }
+
+    &__title {
+        color: $main-grey;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: .8rem;
+        letter-spacing: 1.5px;
+        margin-bottom: -.5rem;
+    
+    }
+
+    &__lists {
+     
+       margin-top: 0;
+
+
+        &__list {
+            padding: 0;
+         
+            padding-left: 2rem;
+            color: $dark-grey;
+          
+            &__icon-container {
+                position: relative;
+                display: inline-block;
+         
+                transition: opacity .3s;
+                cursor: pointer;
+                &:hover {
+                    &::after {
+                        opacity: 0.1;
+                    }
+                }
+
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: "";
+                    height: 3rem;
+                    width: 3rem;
+                    border-radius: 50%;
+                    transform: translate(-30%, -30%);
+                    background-color: black;
+                    opacity: 0;
+               
+
+                }
+            }
+
+            &__name-container {
+
+                display: inline-block;
+                
+            }
+            &__icon {
+                
+                
+                margin-right: 1.5rem;
+                font-size: 1.2rem;
+               
+
+            }
+            &__item {
+                text-decoration: none;
+                list-style: none;
+                display: inline-block;
+                margin-top: 1.5rem;
+            }
+
+            &__name {
+                display: inline-block;
+                font-size: 1.2rem;
+                margin: 0;
+            }
+        }
+    }
+}
