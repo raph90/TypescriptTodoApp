@@ -1,20 +1,20 @@
 import nodes from "./nodes";
 
 export const changeMainTitle = (title: string): void => {
-    nodes.mainTitle = title;
-}
+  nodes.mainTitle.textContent = title;
+};
 
 function setTitle(e: Event): void {
-    const targetNode = e.target as HTMLElement;
-    if (targetNode.classList.contains('menu-item')){
-        const id = targetNode.id
-        console.log(id, targetNode)
+  const targetNode = e.target as HTMLElement;
+  const clsList = targetNode.classList;
+  if (clsList.contains("menu-item")) {
+    if (clsList.contains("top-level")) {
+      const id = targetNode.id;
+      changeMainTitle(id);
     }
-   
+  }
 }
 
 export const initSidebarView = (): void => {
-    nodes.sidebarItems.addEventListener('click', setTitle);
-}
-
-
+  nodes.sidebarItems.addEventListener("click", setTitle);
+};

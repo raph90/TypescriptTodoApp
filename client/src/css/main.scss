@@ -2,6 +2,7 @@
 @import "components/maindisplay";
 @import "components/sidebar";
 @import "components/project";
+@import "components/todo";
 @import "normalize/normalize.css";
 
 * {
@@ -10,25 +11,26 @@
 
 html {
   font-size: 62.5%;
-  font-family: "Assistant", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 body {
+  min-width: 900px;
+  overflow-x: hidden;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #1c92d2;
-  background: #74ebd5; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #1c92d2,
-    #f2fcfe
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: rgb(226, 250, 255);
   background: linear-gradient(
-    to right,
-    #1c92d2,
-    #f2fcfe
+    90deg,
+    rgba(226, 250, 255, 1) 0%,
+    rgba(163, 217, 240, 1) 11%,
+    rgba(118, 193, 230, 1) 20%,
+    rgba(71, 168, 219, 1) 35%,
+    rgba(28, 146, 210, 1) 52%
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
@@ -36,9 +38,12 @@ body {
 .app-container {
   color: $body-color;
   height: 90%;
+  min-width: 800px;
   background: transparent;
   display: grid;
   grid-template-columns: minmax(200px, 1fr) minmax(500px, 4fr);
   width: 80%;
   border-radius: $border-radius;
+  box-shadow: 0px 1px 12px 0px #00000012;
+  overflow: hidden;
 }

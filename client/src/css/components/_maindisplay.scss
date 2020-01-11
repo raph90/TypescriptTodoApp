@@ -4,28 +4,35 @@
   height: 100%;
   background: white;
   position: relative;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-top: 2rem;
 }
 
 .small-detail {
   margin-top: 1rem;
   padding: 0;
-  border: $b;
+  margin-left: 2rem;
+  
 
   & h1 {
-    font-size: 1rem;
+    color: $main-blue;
+    font-size: 1.2rem;
+    margin-left: 3rem;
+    margin-top:2rem;
+    font-weight: 500;
+    
   }
 }
 
 .large-text-container {
-    margin-top: 2rem;
+  margin-top: 2rem;
   display: flex;
-  @include gridise(space-between, flex-start);
+  @include gridise(space-between, center);
   height: 8rem;
   .large-text {
-    font-size: 4rem;
-    color: $dark-grey;
+    margin-left: 5rem;
+
+    font-size: 3rem;
+    color: $main-grey;
     & h1 {
       margin: 0;
     }
@@ -33,34 +40,126 @@
 }
 
 .toggle-menu-container {
+  margin-right: 2rem;
   display: flex;
   @include gridise(space-between, center);
 
   &__toggleButton {
     color: $main-grey;
     font-size: 1rem;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     margin-left: 1rem;
     background: transparent;
     border-radius: 30px;
     cursor: pointer;
- 
 
     & h3 {
-        margin: 0;
-       
+      margin: 0;
     }
 
     &:hover {
-        box-shadow: 0px 0px 7px 0px #1d8ac6;
-        color: white;
-        background-image: linear-gradient(to right top, #1c92d2, #1c90cf, #1d8ecc, #1d8cc9, #1d8ac6);
+      box-shadow: 0px 0px 7px 0px #1d8ac6;
+      color: white;
+      background-image: linear-gradient(
+        to right top,
+        #1c92d2,
+        #1c90cf,
+        #1d8ecc,
+        #1d8cc9,
+        #1d8ac6
+      );
     }
 
     &.selectedButton {
-        color: white;
-        background-image: linear-gradient(to right top, #1c92d2, #1c90cf, #1d8ecc, #1d8cc9, #1d8ac6);
-        box-shadow: 0px 0px 7px 0px #1d8ac6;
+      color: white;
+      background-image: linear-gradient(
+        to right top,
+        #1c92d2,
+        #1c90cf,
+        #1d8ecc,
+        #1d8cc9,
+        #1d8ac6
+      );
+      box-shadow: 0px 0px 7px 0px #1d8ac6;
     }
   }
+}
+
+.project-toggle-container {
+  height: 6rem;
+  width: 100%;
+  
+  display: flex;
+
+  margin-top: 4rem;
+}
+
+.project-toggle {
+  height: 100%;
+  padding: 0 3rem;
+  display: flex;
+  width: 20rem;
+  border-bottom: 1px solid rgb(230, 230, 230);
+  @include gridise(center, center);
+  cursor: pointer;
+
+  &.selectedToggle {
+    border-bottom: 1px solid $main-blue-light;
+  }
+  &:hover {
+    
+    border-bottom: 1px solid $main-blue-light;
+    & .project-toggle__spanArea__span {
+   
+        
+    }
+
+    
+  }
+  &__spanArea {
+    display: inline-flex;
+    height: 100%;
+    margin-right: .5rem;
+    display: inline-flex;
+    @include gridise(center, center);
+
+    &__span {
+        margin-right: .5rem;
+      background: rgb(235, 235, 235);
+      padding: 0.5rem 1rem;
+      color: $main-blue;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+
+    & h1 {
+      text-align: center;
+      color: $main-grey;
+      font-size: 1.2rem;
+      margin: 0;
+    }
+  }
+}
+
+
+.project-closer {
+    height: 100%;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+.main-project-view {
+    
+    padding-top: 3rem;
+    padding-right: 6rem;
+    height: 40rem;
+    width: 100%;
+    overflow: scroll;
+    
 }

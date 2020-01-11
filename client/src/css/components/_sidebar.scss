@@ -10,6 +10,8 @@
     overflow: scroll;
     height: 100%;
     position: absolute;
+    padding-top: 2rem;
+    padding-left: 1rem;
     top: 0;
     left: 0;
     width: 100%;
@@ -34,12 +36,13 @@
   &__items {
     position: absolute;
     z-index: 2;
-    height: 90%;
+  
     width: 100%;
  
 
     &__toparea {
         margin-top: 2rem;
+        margin-bottom: 4rem;
     }
 
     &__projects {
@@ -57,7 +60,7 @@
 .menu-item {
   color:$dark-grey;
   font-size: 1rem;
-  height: 2.5rem;
+  margin-bottom: 2rem;
   width: 100%;
   display: flex;
   padding-left: 2rem;
@@ -65,19 +68,17 @@
   @include gridise(flex-start, center);
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.119);
-    color: white;
+    color: $main-blue-dark;
   }
 
   &.selected {
-    background-color: rgba(0, 0, 0, 0.119);
-    color: white;
+    color: $main-blue-dark;
   }
 
   // border: $b;
 
   &__icon {
-    color:$dark-grey;
+    color:$main-grey;
     display: inline-block;
     margin-right: 1.5rem;
     font-size: 1.2rem;

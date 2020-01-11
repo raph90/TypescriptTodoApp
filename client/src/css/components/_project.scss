@@ -32,7 +32,7 @@
                 display: inline-block;
          
                 transition: opacity .3s;
-                cursor: pointer;
+                cursor: grab;
                 &:hover {
                     &::after {
                         opacity: 0.1;
@@ -62,7 +62,7 @@
             }
             &__icon {
                 
-                
+                color: $main-grey;
                 margin-right: 1.5rem;
                 font-size: 1.2rem;
                
@@ -79,6 +79,7 @@
                 display: inline-block;
                 font-size: 1.2rem;
                 margin: 0;
+                color: $main-grey;
             }
         }
     }

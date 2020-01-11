@@ -5,10 +5,7 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Assistant&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap" rel="stylesheet">
     <title>Todos with Typescript.</title>
   </head>
   <body>
@@ -17,23 +14,23 @@
         <div class="sidebar__both">
           <div class="sidebar__items">
             <div class="sidebar__items__toparea">
-              <div class="menu-item selected" id="inbox">
+              <div class="menu-item top-level selected" id="Inbox">
                 <i class="fas fa-inbox menu-item__icon"></i>
                 <h2 class="menu-item__title">Inbox</h2>
               </div>
-              <div class="menu-item" id="today">
+              <div class="menu-item top-level" id="Today">
                 <i class="fas fa-star menu-item__icon"></i>
                 <h2 class="menu-item__title">Today</h2>
               </div>
-              <div class="menu-item">
+              <div class="menu-item top-level" id="Calendar">
                 <i class="fas fa-calendar menu-item__icon"></i>
                 <h2 class="menu-item__title">Upcoming</h2>
               </div>
-              <div class="menu-item">
+              <div class="menu-item top-level" id="Completed">
                 <i class="fas fa-check menu-item__icon"></i>
                 <h2 class="menu-item__title">Completed</h2>
               </div>
-              <div class="menu-item">
+              <div class="menu-item top-level" id="Trash">
                 <i class="fas fa-trash menu-item__icon"></i>
                 <h2 class="menu-item__title">Trash</h2>
               </div>
@@ -180,11 +177,11 @@
       </div>
       <div class="main-display">
         <div class="small-detail">
-            <h1>Something goes here</h1>
+            <h1>Todos With Typescript</h1>
         </div>
         <div class="large-text-container">
-            <div class="large-text" id="main-title">
-                <h1>Inbox</h1>
+            <div class="large-text">
+                <h1 id="main-title">Inbox</h1>
             </div>
             <div class="toggle-menu-container">
               <div class="toggle-menu-container__toggleButton selectedButton">
@@ -201,8 +198,64 @@
               </div>
             </div>
         </div>
-        <div class="project-toggle-container"></div>
-        <div class="main-project-view"></div>
+        <div class="project-toggle-container">
+          <div class="project-toggle selectedToggle">
+            <div class="project-toggle__spanArea">
+              <span class="project-toggle__spanArea__span">12</span>
+            </div>
+            <div class="project-toggle__title">
+              <h1>Todos</h1>
+            </div>
+          </div>
+          <div class="project-toggle">
+            <!-- <div class="project-toggle__spanArea">
+              <span class="project-toggle__spanArea__span">12</span>
+            </div> -->
+            <div class="project-toggle__title">
+              <h1>Notes</h1>
+            </div>
+          </div>
+          <div class="project-toggle">
+            <div class="project-toggle__spanArea">
+              <span class="project-toggle__spanArea__span">12</span>
+            </div>
+            <div class="project-toggle__title">
+              <h1>Links</h1>
+            </div>
+          </div>
+          <div class="project-toggle">
+            
+            <div class="project-toggle__title">
+              <h1>Files</h1>
+            </div>
+          </div>
+          <div class="project-closer"></div>
+         
+        </div>
+        <div class="main-project-view">
+          
+          <div class="todo-item clickToSelect" id="thisone">
+            <div class="todo-item__complete">
+              <span class="todo-item__complete__complete-span " id="span-thisone">
+                <i class="fas fa-check todo-item__complete__complete-span__icon" ></i>
+              </span>
+            </div>
+            <div class="todo-item__main">
+              <div class="todo-item__main__info">
+                <div class="todo-item__main__info__icon-container">
+                  <i class="fas fa-bars todo-item__main__info__icon"></i>
+                </div>
+                <div class="todo-item__main__info__text-container">
+                  <p class="todo-item__main__info__text-container__text">Build a cool todo app with Typescript</p>
+                </div>
+              </div>
+              <div class="todo-item__main__dragger">
+                <i class="fas fa-ellipsis-h todo-item__main__dragger__icon"></i>
+              </div>
+              
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
