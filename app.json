@@ -1,0 +1,21 @@
+{
+    "name": "typescript-todos",
+    "description": "simple todo app made with Typescript on both server and client",
+    "scripts": {
+    },
+    "env": {
+    },
+    "formation": {
+      "web": {
+        "quantity": 1
+      }
+    },
+    "addons": [
+  
+    ],
+    "buildpacks": [
+      {
+        "url": "heroku/nodejs"
+      }
+    ]
+  }
