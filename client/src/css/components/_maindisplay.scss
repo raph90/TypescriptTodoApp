@@ -1,36 +1,66 @@
 .main-display {
-    border-top-right-radius: $border-radius;
-    border-bottom-right-radius: $border-radius;
-    height: 100%;
-    background: white;
-    position: relative;
-    padding-left: 2rem;
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+  height: 100%;
+  background: white;
+  position: relative;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .small-detail {
-    margin-top: 1rem;
-    padding: 0;
-    border : $b;
+  margin-top: 1rem;
+  padding: 0;
+  border: $b;
 
-    & h1 {
-        font-size: 1rem;
-    }
+  & h1 {
+    font-size: 1rem;
+  }
 }
 
 .large-text-container {
-    display: flex;
-    @include gridise(flex-start, center);
-    height: 8rem;
-    .large-text {
-        font-size: 2rem;
-        color: $dark-grey;
-        & h1 {
-            margin: 0;
-        }
+    margin-top: 2rem;
+  display: flex;
+  @include gridise(space-between, flex-start);
+  height: 8rem;
+  .large-text {
+    font-size: 4rem;
+    color: $dark-grey;
+    & h1 {
+      margin: 0;
     }
+  }
 }
 
 .toggle-menu-container {
-    
-}
+  display: flex;
+  @include gridise(space-between, center);
 
+  &__toggleButton {
+    color: $main-grey;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    margin-left: 1rem;
+    background: transparent;
+    border-radius: 30px;
+    cursor: pointer;
+ 
+
+    & h3 {
+        margin: 0;
+       
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 7px 0px #1d8ac6;
+        color: white;
+        background-image: linear-gradient(to right top, #1c92d2, #1c90cf, #1d8ecc, #1d8cc9, #1d8ac6);
+    }
+
+    &.selectedButton {
+        color: white;
+        background-image: linear-gradient(to right top, #1c92d2, #1c90cf, #1d8ecc, #1d8cc9, #1d8ac6);
+        box-shadow: 0px 0px 7px 0px #1d8ac6;
+    }
+  }
+}

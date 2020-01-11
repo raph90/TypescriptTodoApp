@@ -35,10 +35,10 @@ body {
 
 .app-container {
   color: $body-color;
-  height: 80%;
+  height: 90%;
   background: transparent;
   display: grid;
   grid-template-columns: minmax(200px, 1fr) minmax(500px, 4fr);
-  width: 60%;
+  width: 80%;
   border-radius: $border-radius;
 }

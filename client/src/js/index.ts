@@ -1,6 +1,8 @@
+import '@fortawesome/fontawesome-free/js/all'
 import { hello } from "./views/test";
 import "../css/main.scss";
-import '@fortawesome/fontawesome-free/js/all'
+import * as sidebarView from "./views/SidebarView";
+
 import axios, { AxiosResponse } from "axios"
 const hi = hello("Agatha");
 
@@ -15,5 +17,6 @@ async function getData(): Promise<any> {
 }
 
 getData();
+sidebarView.initSidebarView();
 
 
