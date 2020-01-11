@@ -3,4 +3,34 @@
     border-bottom-right-radius: $border-radius;
     height: 100%;
     background: white;
+    position: relative;
+    padding-left: 2rem;
 }
+
+.small-detail {
+    margin-top: 1rem;
+    padding: 0;
+    border : $b;
+
+    & h1 {
+        font-size: 1rem;
+    }
+}
+
+.large-text-container {
+    display: flex;
+    @include gridise(flex-start, center);
+    height: 8rem;
+    .large-text {
+        font-size: 2rem;
+        color: $dark-grey;
+        & h1 {
+            margin: 0;
+        }
+    }
+}
+
+.toggle-menu-container {
+    
+}
+
