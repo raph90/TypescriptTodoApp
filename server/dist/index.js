@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
     res.sendFile(HTML_FILE);
 });
 app.get("/api/hello", (req, res) => {
-    res.json({ message: "hello you cunt" });
+    res.json({ message: "hello there" });
 });
 // start the Express server
 app.listen(app.get("port"), () => {
