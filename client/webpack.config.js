@@ -1,25 +1,34 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const path = require('path');
+const path = require("path");
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: "./src/index.html", 
+  template: "./src/index.html",
   filename: "./index.html"
 });
 module.exports = {
-  entry: "./src/index.js",
-  output: { // NEW
-    path: path.join(__dirname, 'dist'),
-    filename: "[name].js"
-  }, // NEW Ends
+  entry: "./src/js/index.ts",
+  output: {
+    // NEW
+    path: path.join(__dirname, "dist"),
+    filename: "js/[name].js"
+  },
+  devtool: "source-map",
   plugins: [htmlPlugin],
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.ts$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
-      }
+        use: [
+          {
+            loader: "ts-loader"
+          }
+        ]
+      },
+      {
+        enforce: "pre",
+        test: /\.js$/,
+        loader: "source-map-loader"
+    }
     ]
   }
 };
