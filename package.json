@@ -4,7 +4,8 @@
   "description": "",
   "main": "./server/dist/index.js",
   "scripts": {
-    "start": "cd server/ && npm install",
+    "start:prod": "node server/dist/index.js",
+    "postinstall": "npm run prestart:prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
