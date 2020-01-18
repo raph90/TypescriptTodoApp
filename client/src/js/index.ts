@@ -1,26 +1,30 @@
-import '@fortawesome/fontawesome-free/js/all'
-import { hello } from "./views/test";
+import "@fortawesome/fontawesome-free/js/all";
+
 import "../css/main.scss";
 import * as sidebarView from "./views/SidebarView";
 import * as todoView from "./views/TodoView";
+import axios, { AxiosResponse } from "axios";
 
-import axios, { AxiosResponse } from "axios"
+import nodes from "./views/nodes";
+
+import { renderTodos } from "./controllers/TodoController";
+import {addTodo} from "./views/TodoView"
+// async function getData(): Promise<any> {
+//   const data = await axios.get("/api/hello");
+//   localState.data = data.data;
+//   console.log(localState);
+// }
+
+// getData();
 
 
-const localState = {
-    data: Object
+
+
+function init(): void {
+  sidebarView.initSidebarView();
+  todoView.initTodoView();
+
+  renderTodos();
 }
 
-
-async function getData(): Promise<any> {
-    const data = await axios.get('/api/hello');
-    localState.data = data.data
-    console.log(localState)
-}
-
-getData();
-sidebarView.initSidebarView();
-todoView.initTodoView();
-
-
-
+init();

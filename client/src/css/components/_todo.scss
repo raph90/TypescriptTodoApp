@@ -3,71 +3,53 @@
   display: flex;
   @include gridise(flex-start, flex-start);
   box-sizing: border-box;
-  border: 1px solid rgba(0, 0, 0, 0);
+
   cursor: pointer;
   position: relative;
-
-  &::before {
-      content: "";
-      top: 50%;
-      left: 54%;
-      border: 1px solid black;
-      transform: translate(-50%, -50%);
-      height: 130%;
-      width: 100%;
-      background: transparent;
-      position: absolute;
-  }
+  margin-bottom: 1rem;
+ 
   
 
   &__complete {
-      pointer-events: none;
+    
     width: 6rem;
     height: 100%;
     display: flex;
     @include gridise(center, center);
-    &__complete-span {
-      height: 2.5rem;
-      display: flex;
-      @include gridise(center, center);
-      width: 2.5rem;
-    
 
-    //   border: 1px solid rgba(0, 0, 0, 0.173);
-      cursor: pointer;
-     
-
-      
-
-      &__icon {
-
-        .todo-item__complete__complete-span.todoSelected & {
-            @include blue-shadow;   
-            background: $main-blue;
-        }
-          color: white;
-          font-size: 3rem;
-
-         
-
-
-         
-          background: white;
-          padding: 1rem;
-          border-radius: 50%;
-      }
+    & .icon {
+      font-size: 3rem;
+      pointer-events: none;
     }
+
+  }
+
+  .complete {
+    color: $main-blue-light
+  }
+
+  .incomplete {
+    color: $light-grey;
+  }
+
+  .lineThrough {
+    text-decoration: line-through;
+  }
+
+  .greyed {
+    background: $light-grey;
   }
 
   &__main {
     pointer-events: none;
     width: calc(100% - 6rem);
     height: 100%;
-    background: $main-blue;
+
     border-radius: 7px;
-    @include blue-shadow;
+    // @include blue-shadow;
     display: flex;
-    @include blue-shadow;
+    border: 1px solid $light-grey;
+
     @include gridise(space-between, center);
 
     &__info {
@@ -76,8 +58,8 @@
       display: flex;
       @include gridise(flex-start, center);
       width: calc(100% - 6rem);
-      padding: 2rem 2rem;
-      background: $main-blue;
+      padding: 2rem 1rem;
+    
       border-radius: 7px;
      
 
@@ -101,7 +83,7 @@
           @include gridise(flex-start, center);
 
           &__text {
-              color: white;
+              color: black;
               font-size: 1.4rem;
           }
 
@@ -122,4 +104,9 @@
       }
     }
   }
+}
+
+
+.selectedTodo {
+  background: red;
 }

@@ -1,5 +1,7 @@
 import nodes from "./nodes";
-
+import {Todo} from "../interfaces";
+import appState from "../models/appState";
+const {todos} = nodes;
 export const changeMainTitle = (title: string): void => {
   nodes.mainTitle.textContent = title;
 };
@@ -18,3 +20,5 @@ function setTitle(e: Event): void {
 export const initSidebarView = (): void => {
   nodes.sidebarItems.addEventListener("click", setTitle);
 };
+
+
