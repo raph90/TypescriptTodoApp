@@ -2,7 +2,7 @@ $body-color: blue;
 $border-radius: 15px;
 $b: 1px solid black;
 
-$mid-grey:#7e7e7e;
+$mid-grey: #7e7e7e;
 $main-grey: #4a4a4a;
 $light-grey: #d8d8d8;
 $dark-grey: rgb(36, 36, 36);
@@ -12,11 +12,14 @@ $main-blue-dark: #009ff5;
 $light-border-bottom: 1px solid rgb(230, 230, 230);
 
 @mixin gridise($justify, $align, $flexdir: row) {
-    flex-direction: $flexdir;
-    justify-content: $justify;
-    align-items: $align;
+  flex-direction: $flexdir;
+  justify-content: $justify;
+  align-items: $align;
 }
 
 @mixin blue-shadow {
-    box-shadow: 0px 0px 7px 0px #1d8ac6;
+  box-shadow: 0px 0px 7px 0px #1d8ac6;
 }
+
+
+
