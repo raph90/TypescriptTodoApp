@@ -8,6 +8,8 @@
   
 
   &__both {
+
+    z-index: 500;
     overflow: auto;
     height: 100%;
     position: absolute;
@@ -40,13 +42,17 @@
  
 
     &__toparea {
+      
+        animation: slide-in .4s ease-out .3s 1 forwards;
         margin-top: 2rem;
         margin-bottom: 4rem;
     }
 
     &__projects {
+        transform: translateX(-100%);
         margin-top: 2rem;
         margin-bottom: 2rem;
+        animation: slide-in .4s ease-out .8s 1 forwards;
     }
 
     
@@ -89,5 +95,26 @@
     display: inline-block;
     color: inherit;
     pointer-events: none;
+  }
+}
+
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  95% {
+    opacity: 0.5
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
   }
 }

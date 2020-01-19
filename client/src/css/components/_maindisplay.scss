@@ -5,7 +5,7 @@
   width: 700px;
   background: white;
   position: relative;
-  padding-top: 2rem;
+
 }
 
 .add-todo-section {
@@ -14,7 +14,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 7.5rem;
+  height: 7rem;
   background: white; 
   
   display: flex;
@@ -53,8 +53,16 @@
   }
 }
 
+.small-detail-container {
+  height: 5rem;
+  display: flex;
+  @include gridise(flex-start, center);
+  padding-top: 4.5rem;
+  padding-left: 3rem;
+}
+
 .small-detail {
-  margin-top: 1rem;
+  
   padding: 0;
   margin-left: 2rem;
   
@@ -62,18 +70,17 @@
   & h1 {
     color: $main-blue;
     font-size: 1.2rem;
-    margin-left: 3rem;
-    margin-top:2rem;
+    margin: 0;
     font-weight: 500;
     
   }
 }
 
 .large-text-container {
-  margin-top: 2rem;
+  
   display: flex;
   @include gridise(space-between, center);
-  height: 8rem;
+  height: 10rem;
   .large-text {
     margin-left: 5rem;
 
@@ -137,7 +144,7 @@
   
   display: flex;
 
-  margin-top: 4rem;
+
 }
 
 .project-toggle {
@@ -206,7 +213,7 @@
   padding-right: 4rem;
   padding-bottom: 2rem;
   width: 100%;
-  height: 58%;
+  height: calc(100% - 28rem);
   overflow: auto;
 
     & ul {
